@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ece7dd" />
+  <title>纸间 · 二级页面</title>
+  <meta name="description" content="纸间离线阅读 App 的二级页面：搜索、整理摘录、设置、阅读偏好、本地备份与导入导出。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2320221d'/%3E%3Cpath d='M20 14h24v36H20z' fill='%23f5f1e8'/%3E%3Cpath d='M27 14v12l5-3 5 3V14' fill='%23b95336'/%3E%3Cpath d='M27 38h10M27 44h7' stroke='%2320221d' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="board-page secondary-board-page">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="board-nav">
+    <a class="board-brand" href="index.html" aria-label="纸间首页">
+      <span class="brand-mark" data-brand-mark></span>
+      <span class="board-brand-word">纸间<small>ZHIJIAN</small></span>
+    </a>
+    <div class="board-nav-meta">
+      <span>SECONDARY SURFACES</span>
+      <i></i>
+      <span>UI CONCEPT / 2026</span>
+    </div>
+    <div class="board-nav-actions">
+      <a class="board-secondary-link" href="index.html">← 主设计稿</a>
+      <a class="proto-link" href="prototype.html">
+        打开可交互原型
+        <span class="link-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="secondary-hero">
+      <div>
+        <div class="eyebrow hero-eyebrow"><span>03</span> SECONDARY SURFACES · 07 SCREENS</div>
+        <h1>主页面之外，<br /><em>还有安静的细部。</em></h1>
+      </div>
+      <aside class="secondary-hero-aside">
+        <p>
+          搜索、整理、设置、阅读偏好、本地备份与文件导入导出。
+          它们不占底部导航，但在需要时，总能一步抵达；每一页仍然带着纸的温度和一点液态玻璃。
+        </p>
+        <div class="secondary-stats">
+          <div><b>07</b><span>二级页面</span></div>
+          <div><b>01</b><span>系统文件选择器</span></div>
+          <div><b>00</b><span>云端请求</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="secondary-grid" id="secondary-stage"></div>
+
+    <footer class="secondary-footer-note">
+      <span>＋ 导入由系统文件选择器接管，纸间只负责把选中的书带回本机。</span>
+      <a href="prototype.html">在原型里实际点一遍 <span>→</span></a>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    document.querySelectorAll("[data-brand-mark]").forEach((el) => {
+      el.innerHTML = Zhijian.brandMark();
+    });
+    Zhijian.renderSecondaryBoard(document.querySelector("#secondary-stage"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ece7dd" />
+  <title>纸间 · 离线阅读 App UI</title>
+  <meta name="description" content="纸间是一款本地优先的离线阅读 App。三个标签页，一个安静的阅读空间。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2320221d'/%3E%3Cpath d='M20 14h24v36H20z' fill='%23f5f1e8'/%3E%3Cpath d='M27 14v12l5-3 5 3V14' fill='%23b95336'/%3E%3Cpath d='M27 38h10M27 44h7' stroke='%2320221d' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="board-page">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="board-nav">
+    <a class="board-brand" href="index.html" aria-label="纸间首页">
+      <span class="brand-mark" data-brand-mark></span>
+      <span class="board-brand-word">纸间<small>ZHIJIAN</small></span>
+    </a>
+    <div class="board-nav-meta">
+      <span>OFFLINE READING</span>
+      <i></i>
+      <span>UI CONCEPT / 2026</span>
+    </div>
+    <div class="board-nav-actions">
+      <a class="board-secondary-link" href="secondary.html">二级页面</a>
+      <a class="proto-link" href="prototype.html">
+        打开可交互原型
+        <span class="link-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="board-hero">
+      <div class="hero-title-wrap">
+        <div class="eyebrow hero-eyebrow"><span>01</span> PRODUCT DESIGN · 三标签 · 液态玻璃</div>
+        <h1 class="board-title">让阅读，<br /><em>回到离线。</em></h1>
+        <div class="hero-stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs>
+              <path id="stamp-circle" d="M60,60 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0" />
+            </defs>
+            <text>
+              <textPath href="#stamp-circle" startOffset="0%">LOCAL FIRST · READ SLOWLY · KEEP QUIET · </textPath>
+            </text>
+            <path d="M46 44h21l9 9v26H46z" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <path d="M67 44v9h9M53 61h13M53 67h10" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width=".7" opacity=".35" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-aside">
+        <p class="hero-desc">
+          纸间是一款「本地优先」的离线阅读 App。没有推荐流，没有账号，也没有打扰。
+          我们把阅读这件事收进三个页面，让书真正属于你。
+        </p>
+        <div class="hero-tags" aria-label="三个主要标签页">
+          <div class="hero-tag">
+            <span class="tag-index">01</span>
+            <div><b>书架</b><small>拥有 · LIBRARY</small></div>
+            <span class="tag-desc">把书带回本地</span>
+          </div>
+          <div class="hero-tag">
+            <span class="tag-index">02</span>
+            <div><b>摘录</b><small>留下 · HIGHLIGHTS</small></div>
+            <span class="tag-desc">把句子留给自己</span>
+          </div>
+          <div class="hero-tag">
+            <span class="tag-index">03</span>
+            <div><b>我的</b><small>回望 · READING LIFE</small></div>
+            <span class="tag-desc">看见读过的路</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" aria-label="三个页面预览">
+      <div class="showcase-head">
+        <span>THREE TABS, ONE QUIET PLACE</span>
+        <span class="showcase-head-cn">三页，刚好装下阅读这件事</span>
+      </div>
+      <div class="phone-stage" id="phone-stage"></div>
+      <div class="secondary-jump">
+        <span>07 个二级页面 · 搜索 / 整理 / 设置 / 偏好 / 备份 / 文件</span>
+        <a href="secondary.html">查看二级页面 <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="spec-section" aria-label="设计规范">
+      <div class="spec-intro">
+        <div class="eyebrow"><span>02</span> DESIGN LANGUAGE</div>
+        <h2>像纸一样安静，<br />像书一样可靠。</h2>
+        <p>
+          用纸张的暖灰、墨色的文字与一点陶土色，建立不喧哗的阅读界面。
+          底部导航与阅读工具加一层很轻的液态玻璃，让控件浮起来；正文仍然落在安静的纸上。
+        </p>
+      </div>
+
+      <div class="spec-grid">
+        <article class="spec-card spec-palette">
+          <div class="spec-label">COLOR / 色彩</div>
+          <div class="swatches">
+            <div class="swatch" style="--swatch:#f5f1e8"><span></span><b>纸白</b><small>#F5F1E8</small></div>
+            <div class="swatch" style="--swatch:#20221d"><span></span><b>墨色</b><small>#20221D</small></div>
+            <div class="swatch" style="--swatch:#b95336"><span></span><b>陶土</b><small>#B95336</small></div>
+            <div class="swatch" style="--swatch:#465e4d"><span></span><b>苔绿</b><small>#465E4D</small></div>
+            <div class="swatch" style="--swatch:#e6d6b8"><span></span><b>暖沙</b><small>#E6D6B8</small></div>
+          </div>
+          <p class="spec-note">绿色只用于「离线可用」等让人安心的状态；陶土色负责行动与重点。</p>
+        </article>
+
+        <article class="spec-card spec-type">
+          <div class="spec-label">TYPE / 字体</div>
+          <div class="type-specimen">
+            <span class="type-han">阅</span>
+            <div class="type-rows">
+              <div><span>标题与引文</span><b class="serif">宋体 · 思源宋体</b></div>
+              <div><span>界面与正文</span><b>苹方 · 系统无衬线</b></div>
+              <div><span>数字与标签</span><b class="mono">12 / 24 / 48</b></div>
+            </div>
+          </div>
+          <p class="spec-note">衬线负责情绪，无衬线负责效率；正文行高 1.9–2.0，给中文留呼吸。</p>
+        </article>
+
+        <article class="spec-card spec-principles">
+          <div class="spec-label">PRINCIPLES / 原则</div>
+          <ol>
+            <li><span>01</span><div><b>离线，是第一功能</b><p>不把离线当作降级状态。无网络也能打开、阅读、做笔记。</p></div></li>
+            <li><span>02</span><div><b>少一点选择，多一点阅读</b><p>三个标签，三个明确任务。把复杂设置收进抽屉。</p></div></li>
+            <li><span>03</span><div><b>数据属于读者</b><p>没有账号也能用，阅读记录和摘录只存在本机。</p></div></li>
+            <li><span>04</span><div><b>玻璃是控件，不是底色</b><p>只在悬浮导航、圆形按钮和工具浮层上使用模糊与高光；正文永远保持纸的哑光。</p></div></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <footer class="board-footer">
+      <div>
+        <span class="brand-mark brand-mark--small" data-brand-mark></span>
+        <span>纸间 · 让每一本书都能离线抵达</span>
+      </div>
+      <a href="prototype.html">体验三个标签页 <span>→</span></a>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    Zhijian.renderBoard(document.querySelector("#phone-stage"));
+    document.querySelectorAll("[data-brand-mark]").forEach((el) => {
+      el.innerHTML = Zhijian.brandMark();
+    });
+  </script>
+</body>
+</html>

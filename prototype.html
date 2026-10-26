@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#e9e4d9" />
+  <title>纸间 · 可交互原型</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2320221d'/%3E%3Cpath d='M20 14h24v36H20z' fill='%23f5f1e8'/%3E%3Cpath d='M27 14v12l5-3 5 3V14' fill='%23b95336'/%3E%3Cpath d='M27 38h10M27 44h7' stroke='%2320221d' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="prototype-page">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="proto-nav">
+    <a class="board-brand" href="index.html">
+      <span class="brand-mark" data-brand-mark></span>
+      <span class="board-brand-word">纸间<small>ZHIJIAN</small></span>
+    </a>
+    <span class="proto-nav-label">INTERACTIVE PROTOTYPE</span>
+    <a class="proto-back" href="index.html"><span>←</span> 返回设计稿</a>
+  </header>
+
+  <main class="proto-main">
+    <aside class="proto-intro">
+      <div class="eyebrow"><span>PROTOTYPE</span> 可交互预览</div>
+      <h1>翻开一页，<br />就现在。</h1>
+      <p>三个标签页可以自由切换。搜索、整理、设置、阅读偏好、本地备份与导入导出都可继续点进去；「＋」会唤起系统文件选择器。</p>
+      <div class="proto-steps">
+        <div><span>01</span><p>在书架切换三种阅读状态</p></div>
+        <div><span>02</span><p>点开「夜行列车」继续阅读</p></div>
+        <div><span>03</span><p>轻点正文，隐藏或唤回阅读工具</p></div>
+      </div>
+      <a class="proto-inline-link" href="index.html">查看完整设计说明 <span>↗</span></a>
+    </aside>
+
+    <div class="proto-device" id="prototype-root"></div>
+
+    <aside class="proto-meta">
+      <div class="proto-meta-block">
+        <span class="meta-kicker">TODAY</span>
+        <div class="proto-date">26<span>OCT</span></div>
+        <p>世界很吵。<br />还好书是安静的。</p>
+      </div>
+      <div class="proto-meta-block proto-meta-block--line">
+        <span class="meta-kicker">OFFLINE / LOCAL FIRST</span>
+        <div class="local-badge">
+          <span class="status-dot"></span>
+          无需网络
+        </div>
+        <p>所有书籍、笔记与阅读进度，只保存在当前设备。</p>
+      </div>
+    </aside>
+  </main>
+
+  <div class="proto-hint">点击底部标签切换页面 · 点击继续阅读进入阅读器</div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    document.querySelectorAll("[data-brand-mark]").forEach((el) => {
+      el.innerHTML = Zhijian.brandMark();
+    });
+    Zhijian.renderPrototype(document.querySelector("#prototype-root"));
+  </script>
+</body>
+</html>
