@@ -541,7 +541,7 @@ const Zhijian = (() => {
 
         <section class="goal-card">
           <div class="goal-copy">
-            <span class="card-kicker">2026 READING GOAL</span>
+            <span class="card-kicker">2026 阅读目标</span>
             <h2>今年，读满 <b>36</b> 本。</h2>
             <div class="goal-progress"><span style="width:67%"></span></div>
             <div class="goal-meta"><span>已读 <b>24</b> 本</span><span>还差 12 本</span></div>
